@@ -34,6 +34,7 @@ App.WorkingDir=2430930/ShooterGame/Binaries/Win64
 App.LinuxCommandLineArgs=./ArkAscendedServer.exe
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}}?listen?Port={{$GamePort}}?RCONEnabled=True?RCONServerGameLogBuffer=600?RCONPort={{$RCONPort}}?MultiHome={{$ApplicationIPBinding}}?{{$FormattedArgs}}{{OverrideOfficialDifficulty}}{{CustomOptions}}?ServerAdminPassword={{$RemoteAdminPassword}} -WinLiveMaxPlayers={{$MaxUsers}} {{mods}}{{pconlymods}}{{BattlEye}} -ServerPlatform={{ServerPlatform}} -ActiveEvent={{ActiveEvent}} -culture={{culture}} {{CustomFlags}} -servergamelogApp.UseLinuxIOREDIR=False
+App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"2399830","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
 App.CommandLineParameterFormat={0}={1}

@@ -1,40 +1,5 @@
 [
     {
-        "DisplayName":"Server Name",
-        "Category":"ARK Server Settings",
-        "Description":"Set the name of the server as it appears publicly",
-        "Keywords":"server,name,sessionname",
-        "FieldName":"SessionName",
-        "InputType":"text",
-        "ParamFieldName":"SessionSettings.SessionName",
-        "DefaultValue":"AMP Powered ARK: Survival Ascended Server",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"MOTD",
-        "Category":"ARK Server Settings",
-        "Description":"Sets the player welcome message (MOTD)",
-        "Keywords":"motd,welcome,message",
-        "FieldName":"MOTDMessage",
-        "InputType":"text",
-        "ParamFieldName":"MessageOfTheDay.Message",
-        "DefaultValue":"Welcome to ARK!",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"MOTD Duration",
-        "Category":"ARK Server Settings",
-        "Description":"Sets the time period for display of the MOTD",
-        "Keywords":"motd,message,period,duration",
-        "FieldName":"MOTDDuration",
-        "InputType":"number",
-        "ParamFieldName":"MessageOfTheDay.Duration",
-        "DefaultValue":"20",
-        "Placeholder":"20",
-        "Suffix":"seconds",
-        "EnumValues":{}
-    },
-    {
         "DisplayName":"Map",
         "Category":"ARK Server Settings",
         "Description":"Sets the map for the server. If Custom is selected, Custom Map Name must also be set",
@@ -212,50 +177,6 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"Enable Admin Logging In Chat",
-        "Category":"ARK Server Settings",
-        "Description":"If set, all admin commands used will be logged to in-game chat",
-        "Keywords":"admin,log,chat,adminlogging",
-        "FieldName":"AdminLogging",
-        "InputType":"checkbox",
-        "ParamFieldName":"AdminLogging",
-        "IncludeInCommandLine":true,
-        "DefaultValue":"False",
-        "EnumValues":{
-            "False":"False",
-            "True":"True"
-        }
-    },
-    {
-        "DisplayName":"Kick Idle Players",
-        "Category":"ARK Server Settings",
-        "Description":"If set, characters that have not moved or interacted within the Kick Idle Players Period will be kicked from the server",
-        "Keywords":"kick,idle,players,enableidleplayerkick",
-        "FieldName":"EnableIdlePlayerKick",
-        "InputType":"checkbox",
-        "ParamFieldName":"EnableIdlePlayerKick",
-        "DefaultValue":"",
-        "EnumValues":{
-            "False":"",
-            "True":"-EnableIdlePlayerKick "
-        }
-    },
-    {
-        "DisplayName":"Kick Idle Players Period",
-        "Category":"ARK Server Settings",
-        "Description":"Sets the time period after which characters that have not moved or interacted will be kicked (if Kick Idle Players is enabled)",
-        "Keywords":"kick,idle,players,period,kickidleplayersperiod",
-        "FieldName":"KickIdlePlayersPeriod",
-        "InputType":"number",
-        "MinValue":"1",
-        "ParamFieldName":"KickIdlePlayersPeriod",
-        "IncludeInCommandLine":true,
-        "DefaultValue":"3600",
-        "Placeholder":"3600",
-        "Suffix":"seconds",
-        "EnumValues":{}
-    },
-    {
         "DisplayName":"Auto Save Period",
         "Category":"ARK Server Settings",
         "Description":"Sets the interval for automatic saves. 0 = constant saving, 9000000 = effectively disabled",
@@ -270,20 +191,6 @@
         "Placeholder":"15.0",
         "Suffix":"minutes",
         "EnumValues":{}
-    },
-    {
-        "DisplayName":"Disable Hang Detection",
-        "Category":"ARK Server Settings",
-        "Description":"If set, prevents the server from shutdown if its start-time takes more than 2700 seconds (45 minutes). Useful for servers with big saves or very slow machines",
-        "Keywords":"hang,detection,disabled,NoHangDetection",
-        "FieldName":"NoHangDetection",
-        "InputType":"checkbox",
-        "ParamFieldName":"NoHangDetection",
-        "DefaultValue":"",
-        "EnumValues":{
-            "False":"",
-            "True":"-NoHangDetection "
-        }
     },
     {
         "DisplayName":"Language",

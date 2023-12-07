@@ -1,5 +1,40 @@
 [
     {
+        "DisplayName":"Server Name",
+        "Category":"ARK Server Settings",
+        "Description":"Set the name of the server as it appears publicly",
+        "Keywords":"server,name,sessionname",
+        "FieldName":"SessionName",
+        "InputType":"text",
+        "ParamFieldName":"SessionSettings.SessionName",
+        "DefaultValue":"AMP Powered ARK: Survival Ascended Server",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"MOTD",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the player welcome message (MOTD)",
+        "Keywords":"motd,welcome,message",
+        "FieldName":"MOTDMessage",
+        "InputType":"text",
+        "ParamFieldName":"MessageOfTheDay.Message",
+        "DefaultValue":"Welcome to ARK!",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"MOTD Duration",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the time period for display of the MOTD",
+        "Keywords":"motd,message,period,duration",
+        "FieldName":"MOTDDuration",
+        "InputType":"number",
+        "ParamFieldName":"MessageOfTheDay.Duration",
+        "DefaultValue":"20",
+        "Placeholder":"20",
+        "Suffix":"seconds",
+        "EnumValues":{}
+    },
+    {
         "DisplayName":"Map",
         "Category":"ARK Server Settings",
         "Description":"Sets the map for the server. If Custom is selected, Custom Map Name must also be set",
@@ -102,18 +137,6 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"Server Password",
-        "Category":"ARK Server Settings",
-        "Description":"Sets the password for players to join the server",
-        "Keywords":"server,password,serverpassword",
-        "FieldName":"ServerPassword",
-        "InputType":"password",
-        "ParamFieldName":"ServerSettings.ServerPassword",
-        "IncludeInCommandLine":false,
-        "DefaultValue":"",
-        "EnumValues":{}
-    },
-    {
         "DisplayName":"Player Limit",
         "Category":"ARK Server Settings",
         "Description":"Sets the maximum number of players allowed on the server",
@@ -175,6 +198,9 @@
         "DefaultValue":"http://arkdedicated.com/banlist.txt",
         "Placeholder":"http://arkdedicated.com/banlist.txt",
         "EnumValues":{}
+    },
+    },
+    },
     },
     {
         "DisplayName":"Auto Save Period",
@@ -251,7 +277,8 @@
         "DefaultValue":"",
         "Placeholder":"?ClampItemStats=True?NewYear1UTC=1672592400",
         "EnumValues":{}
-    },
+    },    
+    
     {
         "DisplayName":"Download Backup Exclusion Files",
         "Category":"SteamCMD and Updates",
@@ -266,5 +293,4 @@
             "False":"false",
             "True":"true"
         }
-    }
 ]

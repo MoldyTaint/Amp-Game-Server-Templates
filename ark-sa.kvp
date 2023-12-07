@@ -1,5 +1,5 @@
-Meta.DisplayName=ARK: Survival Ascended (TEST)
-Meta.Description=ARK: Survival Ascended Dedicated Server (TEST)
+Meta.DisplayName=ARK: Survival Ascended TEST
+Meta.Description=ARK: Survival Ascended Dedicated Server TEST
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
@@ -54,6 +54,9 @@ App.PrimaryApplicationPortRef=GamePort
 App.UniversalSleepApplicationUDPPortRef=0
 App.UniversalSleepSteamQueryPortRef=0
 App.MaxUsers=70
+App.UseRandomAdminPassword=True
+App.PersistRandomPassword=True
+App.RemoteAdminPassword=
 App.AdminMethod=SourceRCON
 App.AdminLoginTransform=None
 App.LoginTransformPrefix=

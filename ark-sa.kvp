@@ -1,5 +1,5 @@
-Meta.DisplayName=ARK: Survival Ascended TEST
-Meta.Description=ARK: Survival Ascended Dedicated Server TEST
+Meta.DisplayName=ARK: Survival Ascended (TEST)
+Meta.Description=ARK: Survival Ascended Dedicated Server (TEST)
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
@@ -33,8 +33,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=2430930/ShooterGame/Binaries/Win64
 App.LinuxCommandLineArgs=./ArkAscendedServer.exe
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{Map}}?listen?Port={{$GamePort}}?RCONEnabled=True?RCONServerGameLogBuffer=600?RCONPort={{$RCONPort}}?MultiHome={{$ApplicationIPBinding}}?{{$FormattedArgs}}{{OverrideOfficialDifficulty}}{{CustomOptions}}?ServerAdminPassword={{$RemoteAdminPassword}} -WinLiveMaxPlayers={{$MaxUsers}} {{mods}}{{pconlymods}}{{BattlEye}} -ServerPlatform={{ServerPlatform}} {{EnableIdlePlayerKick}}{{NoHangDetection}}{{AllowFlyerSpeedLeveling}}{{AllowSpeedLeveling}}{{ForceAllowCaveFlyers}}{{nodinos}}{{ForceRespawnDinos}}{{DisableRailgunPVP}}{{UseStructureStasisGrid}} -ActiveEvent={{ActiveEvent}} -culture={{culture}} {{CustomFlags}} -servergamelog
-App.UseLinuxIOREDIR=False
+App.CommandLineArgs={{$PlatformArgs}} {{Map}}?listen?Port={{$GamePort}}?RCONEnabled=True?RCONServerGameLogBuffer=600?RCONPort={{$RCONPort}}?MultiHome={{$ApplicationIPBinding}}?{{$FormattedArgs}}{{OverrideOfficialDifficulty}}{{CustomOptions}}?ServerAdminPassword={{$RemoteAdminPassword}} -WinLiveMaxPlayers={{$MaxUsers}} {{mods}}{{pconlymods}}{{BattlEye}} -ServerPlatform={{ServerPlatform}} -ActiveEvent={{ActiveEvent}} -culture={{culture}} {{CustomFlags}} -servergamelogApp.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"2399830","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
 App.CommandLineParameterFormat={0}={1}
@@ -54,9 +53,6 @@ App.PrimaryApplicationPortRef=GamePort
 App.UniversalSleepApplicationUDPPortRef=0
 App.UniversalSleepSteamQueryPortRef=0
 App.MaxUsers=70
-App.UseRandomAdminPassword=True
-App.PersistRandomPassword=True
-App.RemoteAdminPassword=
 App.AdminMethod=SourceRCON
 App.AdminLoginTransform=None
 App.LoginTransformPrefix=

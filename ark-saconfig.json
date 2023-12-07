@@ -253,21 +253,6 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"Enable PvE / Disable PvP",
-        "Category":"ARK Gameplay Settings",
-        "Description":"If set, PvE will be enabled, and PvP disabled",
-        "Keywords":"pve,pvp,serverpve",
-        "FieldName":"ServerPVE",
-        "InputType":"checkbox",
-        "ParamFieldName":"ServerPVE",
-        "IncludeInCommandLine":true,
-        "DefaultValue":"False",
-        "EnumValues":{
-            "False":"False",
-            "True":"True"
-        }
-    },
-    {
         "DisplayName":"Download Backup Exclusion Files",
         "Category":"SteamCMD and Updates",
         "Description":"If enabled, default backup exclusion configuration files are downloaded when the server is updated, to save space on AMP backups. If disabled, manually delete any .backupExclude files in the server base directory and in the ShooterGame directory to prevent backup exclusions",

@@ -1,3 +1,39 @@
+[
+    {
+        "DisplayName":"Server Name",
+        "Category":"ARK Server Settings",
+        "Description":"Set the name of the server as it appears publicly",
+        "Keywords":"server,name,sessionname",
+        "FieldName":"SessionName",
+        "InputType":"text",
+        "ParamFieldName":"SessionSettings.SessionName",
+        "DefaultValue":"AMP Powered ARK: Survival Ascended Server",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"MOTD",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the player welcome message (MOTD)",
+        "Keywords":"motd,welcome,message",
+        "FieldName":"MOTDMessage",
+        "InputType":"text",
+        "ParamFieldName":"MessageOfTheDay.Message",
+        "DefaultValue":"Welcome to ARK!",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"MOTD Duration",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the time period for display of the MOTD",
+        "Keywords":"motd,message,period,duration",
+        "FieldName":"MOTDDuration",
+        "InputType":"number",
+        "ParamFieldName":"MessageOfTheDay.Duration",
+        "DefaultValue":"20",
+        "Placeholder":"20",
+        "Suffix":"seconds",
+        "EnumValues":{}
+    },
     {
         "DisplayName":"Map",
         "Category":"ARK Server Settings",
@@ -11,6 +47,7 @@
             "TheIsland_WP":"The Island (default)",
             "{{CustomMap}}":"--Custom--"
         }
+    },
     {
         "DisplayName":"Custom Map Name",
         "Category":"ARK Server Settings",
@@ -88,6 +125,28 @@
         "DefaultValue":"",
         "EnumValues":{}
     },
+    {
+        "DisplayName":"RCON/Server Admin Password",
+        "Category":"ARK Server Settings",
+        "Description":"See the Security and Privacy menu for configurable options for the server's RCON password. The RCON password is also used in the in-game console for players to access administrator commands (unless they are whitelisted)",
+        "Keywords":"rcon,password,serveradminpassword",
+        "FieldName":"RCONPassword",
+        "InputType":"hidden",
+        "ParamFieldName":"RCONPassword",
+        "IncludeInCommandLine":false,
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Server Password",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the password for players to join the server",
+        "Keywords":"server,password,serverpassword",
+        "FieldName":"ServerPassword",
+        "InputType":"password",
+        "ParamFieldName":"ServerSettings.ServerPassword",
+        "IncludeInCommandLine":false,
+        "DefaultValue":"",
+        "EnumValues":{}
     },
     {
         "DisplayName":"Player Limit",
@@ -126,6 +185,7 @@
             "False":"",
             "True":"-NoBattlEye "
         }
+    },
     {
         "DisplayName":"Client Platform/Crossplay Support",
         "Category":"ARK Server Settings",
@@ -151,13 +211,148 @@
         "Placeholder":"http://arkdedicated.com/banlist.txt",
         "EnumValues":{}
     },
- {
-        "DisplayName":"Enable PvP Gamma",
-        "Description":"If set, allows use of console command \"gamma\" in PvP mode",
-        "Keywords":"pvp,gamma,enablepvpgamma",
-        "FieldName":"EnablePvPGamma",
+    {
+        "DisplayName":"Enable Admin Logging In Chat",
+        "Category":"ARK Server Settings",
+        "Description":"If set, all admin commands used will be logged to in-game chat",
+        "Keywords":"admin,log,chat,adminlogging",
+        "FieldName":"AdminLogging",
         "InputType":"checkbox",
-        "ParamFieldName":"EnablePvPGamma",
+        "ParamFieldName":"AdminLogging",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"False",
+        "EnumValues":{
+            "False":"False",
+            "True":"True"
+        }
+    },
+    {
+        "DisplayName":"Kick Idle Players",
+        "Category":"ARK Server Settings",
+        "Description":"If set, characters that have not moved or interacted within the Kick Idle Players Period will be kicked from the server",
+        "Keywords":"kick,idle,players,enableidleplayerkick",
+        "FieldName":"EnableIdlePlayerKick",
+        "InputType":"checkbox",
+        "ParamFieldName":"EnableIdlePlayerKick",
+        "DefaultValue":"",
+        "EnumValues":{
+            "False":"",
+            "True":"-EnableIdlePlayerKick "
+        }
+    },
+    {
+        "DisplayName":"Kick Idle Players Period",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the time period after which characters that have not moved or interacted will be kicked (if Kick Idle Players is enabled)",
+        "Keywords":"kick,idle,players,period,kickidleplayersperiod",
+        "FieldName":"KickIdlePlayersPeriod",
+        "InputType":"number",
+        "MinValue":"1",
+        "ParamFieldName":"KickIdlePlayersPeriod",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"3600",
+        "Placeholder":"3600",
+        "Suffix":"seconds",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Auto Save Period",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the interval for automatic saves. 0 = constant saving, 9000000 = effectively disabled",
+        "Keywords":"auto,save,period,minutes,autosaveperiodminutes",
+        "FieldName":"AutoSavePeriodMinutes",
+        "InputType":"number",
+        "MinValue":"0",
+        "MaxValue":"9000000",
+        "ParamFieldName":"AutoSavePeriodMinutes",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"15.0",
+        "Placeholder":"15.0",
+        "Suffix":"minutes",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Disable Hang Detection",
+        "Category":"ARK Server Settings",
+        "Description":"If set, prevents the server from shutdown if its start-time takes more than 2700 seconds (45 minutes). Useful for servers with big saves or very slow machines",
+        "Keywords":"hang,detection,disabled,NoHangDetection",
+        "FieldName":"NoHangDetection",
+        "InputType":"checkbox",
+        "ParamFieldName":"NoHangDetection",
+        "DefaultValue":"",
+        "EnumValues":{
+            "False":"",
+            "True":"-NoHangDetection "
+        }
+    },
+    {
+        "DisplayName":"Language",
+        "Category":"ARK Server Settings",
+        "Description":"Sets the language of the server",
+        "Keywords":"language,culture",
+        "FieldName":"culture",
+        "InputType":"enum",
+        "ParamFieldName":"culture",
+        "DefaultValue":"en",
+        "EnumValues":{
+            "ca":"Català",
+            "cs":"čeština",
+            "da":"dansk",
+            "de":"Deutsch",
+            "en":"English (default)",
+            "es":"Español",
+            "eu":"euskara",
+            "fi":"suomi",
+            "fr":"Français",
+            "hu":"magyar",
+            "it":"Italiano",
+            "ja":"日本語",
+            "ka":"ქართული",
+            "ko":"한국어",
+            "nl":"Nederlands",
+            "pl":"Polski",
+            "pt_BR":"Português brasileiro",
+            "ru":"Русский",
+            "sv":"Svenska",
+            "th":"ไทย",
+            "tr":"Türkçe",
+            "zh":"中文",
+            "zh-Hans-CN":"使用者",
+            "zh-TW":"国语"
+        }
+    },
+    {
+        "DisplayName":"Custom Command Line Flags",
+        "Category":"ARK Server Settings",
+        "Description":"Sets custom [command line flags](https://ark.wiki.gg/wiki/Server_configuration_(Survival_Ascended%29) for the server (those that start with a - (dash)). Include the dash and separate with a space. Don't use flags already in AMP's settings!",
+        "Keywords":"custom,command,line,flags",
+        "FieldName":"CustomFlags",
+        "InputType":"text",
+        "ParamFieldName":"CustomFlags",
+        "DefaultValue":"",
+        "Placeholder":"-UseItemDupeCheck -UseSecureSpawnRules",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Custom Command Line Options",
+        "Category":"ARK Server Settings",
+        "Description":"Sets custom [command line options](https://ark.wiki.gg/wiki/Server_configuration_(Survival_Ascended%29) for the server (those that start with a ? (question mark)). Include the question mark but do not separate with a space. Don't use options already in AMP's settings!",
+        "Keywords":"custom,command,line,options",
+        "FieldName":"CustomOptions",
+        "InputType":"text",
+        "ParamFieldName":"CustomOptions",
+        "DefaultValue":"",
+        "Placeholder":"?ClampItemStats=True?NewYear1UTC=1672592400",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Enable PvE / Disable PvP",
+        "Category":"ARK Gameplay Settings",
+        "Description":"If set, PvE will be enabled, and PvP disabled",
+        "Keywords":"pve,pvp,serverpve",
+        "FieldName":"ServerPVE",
+        "InputType":"checkbox",
+        "ParamFieldName":"ServerPVE",
         "IncludeInCommandLine":true,
         "DefaultValue":"False",
         "EnumValues":{

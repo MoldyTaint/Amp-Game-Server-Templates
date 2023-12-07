@@ -1,5 +1,5 @@
-Meta.DisplayName=ARK TEST BITCH
-Meta.Description=ARK TEST BITCH
+Meta.DisplayName=Ark: Test
+Meta.Description=Ark: Test
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
@@ -24,7 +24,7 @@ Meta.NoCommercialUsage=False
 Meta.ConfigVersion=1.1
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
-App.DisplayName=ARK: Survival Ascended TEST BITCH
+App.DisplayName=ARK: Survival Ascended
 App.RootDir=./ark-sa/
 App.BaseDirectory=./ark-sa/2430930/
 App.SteamWorkshopDownloadLocation=

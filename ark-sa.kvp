@@ -1,5 +1,5 @@
-Meta.DisplayName=Ark Testing 2
-Meta.Description=Ark Testing 2 
+Meta.DisplayName=Ark Survival: Ascended (3rd Party Beta)
+Meta.Description=This is the instance template for AMP for Ark Survival: Ascended. It leaves most settings available to either be configured by 3rd party programs or by yourself in the ini or config files without fear of AMP overwriting them
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
